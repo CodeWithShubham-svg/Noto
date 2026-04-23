@@ -14,7 +14,7 @@ export default function UploadSection() {
     formData.append("title", title);
     formData.append("subject", subject);
 
-    await axios.post("http://localhost:5000/upload", formData);
+    await axios.post("https://noto-notes.onrender.com/upload", formData);
 
     alert("Uploaded successfully");
   };
