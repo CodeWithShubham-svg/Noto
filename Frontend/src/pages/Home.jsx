@@ -8,7 +8,7 @@ export default function Home() {
 
   // 📥 load files + saved state
   useEffect(() => {
-    axios.get("http://localhost:5000/files")
+    axios.get("https://noto-notes.onrender.com/files")
       .then(res => setFiles(res.data))
       .catch(() => alert("Failed to load files"));
 
