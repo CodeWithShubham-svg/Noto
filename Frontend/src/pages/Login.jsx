@@ -18,7 +18,7 @@ export default function Login({ onSuccess }) {
     }
 
     try {
-      await axios.post("http://localhost:5000/login", {
+      await axios.post("https://noto-notes.onrender.com/login", {
         username,
         password
       });
