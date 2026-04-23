@@ -41,7 +41,7 @@ export default function Admin() {
   // FETCH FILES
   const fetchFiles = () => {
     axios
-      .get("http://localhost:5000/files")
+      .get("https://noto-notes.onrender.com/files")
       .then((res) => setFiles(res.data))
       .catch(() => toast.error("Failed to fetch files"));
   };
@@ -63,7 +63,7 @@ export default function Admin() {
       formData.append("title", title);
       formData.append("subject", subject);
 
-      await axios.post("http://localhost:5000/upload", formData, {
+      await axios.post("https://noto-notes.onrender.com/upload", formData, {
         onUploadProgress: (e) => {
           setProgress(Math.round((e.loaded * 100) / e.total));
         },
@@ -90,7 +90,7 @@ export default function Admin() {
     const ok = window.confirm("Are you sure you want to delete this file?");
     if (!ok) return toast.info("Delete cancelled");
 
-    await axios.delete(`http://localhost:5000/file/${id}`);
+    await axios.delete(`https://noto-notes.onrender.com/file/${id}`);
     toast.success("File deleted successfully");
     fetchFiles();
   };
