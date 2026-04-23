@@ -94,5 +94,5 @@ app.delete("/file/:id", (req, res) => {
 // 🚀 START SERVER
 // ==============================
 app.listen(5000, () => {
-  console.log("Server running on http://localhost:5000");
+  console.log("Server running on https://noto-notes.onrender.com");
 });
